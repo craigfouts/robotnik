@@ -1,0 +1,364 @@
+/* -----------------------------------------------------
+
+        COLORS
+    
+    https://coolors.co/2c302e-474a48-909590-9ae19d-537a5a
+
+*/
+
+:root {
+  --gray1: #909590;
+  --gray2: #474A48;
+  --gray3: #2C302E;
+  --lightgreen: #9AE19D;
+  --darkgreen: #537A5A;
+  --white: white;
+}
+
+:root.dark {
+  --primary: var(--gray1);
+  --secondary: var(--gray2);
+  --background: var(--gray3);
+  --green1: var(--lightgreen);
+  --green2: var(--darkgreen);
+  --buttonBackground: var(--darkgreen);
+  --buttonForeground: var(--white);
+}
+
+:root.light {
+  --primary: var(--gray3);
+  --secondary: var(--gray2);
+  --background: var(--white);
+  --green1: var(--darkgreen);
+  --green2: var(--lightgreen);
+  --buttonBackground: var(--lightgreen);
+  --buttonForeground: var(--gray3);
+}
+:root.accessible {
+
+}
+
+:root.corporate {
+
+}
+
+
+
+
+
+/* -----------------------------------------------------
+
+        GLOBAL ITEMS
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Arial", "Helvetica", "Verdana", "sans-serif";
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--background);
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+
+.btn {
+  background-color:var(--buttonBackground); 
+  color: var(--buttonForeground);
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  padding: 0px;
+  margin: 5px;
+  height: 50px;
+  width: 50px;
+  border-radius: 9px;
+}
+
+.btn:hover {
+  background-color: var(--green1); 
+  transition-duration: 0.8s;
+  color: var(--background);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+  background-color: blue;
+} */
+
+#main {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  border-radius: 15px;
+  height: 100vh;
+}
+
+
+
+
+
+/* -----------------------------------------------------
+
+        SIDEBAR
+
+*/
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 100vh;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.buttonGroup>input {
+  height: 60px;
+  width: 60px;
+  padding: 0;
+  margin: 5px 0px;
+}
+
+
+
+
+
+/* -----------------------------------------------------
+
+        PLAYER DIV
+
+*/
+.middleDiv {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--secondary);
+  }
+
+#playerDiv {
+
+}
+
+#toolBar {
+  background-color: var(--background);
+}
+
+#chatTop {
+  display: flex;
+}
+
+.toolBarButton {
+  background-color:var(--buttonBackground); 
+  color: var(--buttonForeground);
+  border: none;
+  /* TODO if you have time figure this out*/
+  /* height: 40px; */
+  /* width: 40px; */
+  border-radius: 9px;
+  margin: 5px;
+}
+
+.toolBarButton:hover {
+  background-color: var(--green1); 
+  transition-duration: 0.8s;
+  color: var(--background);
+}
+
+
+
+
+
+/* -----------------------------------------------------
+
+        INVENTORY DIV
+
+*/
+
+#inventoryDiv {
+  display: none;
+  padding: 50px;
+  color: white;
+  overflow: scroll;
+}
+
+#database {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#database td, #customers th {
+  padding: 8px;
+}
+
+#database tr:nth-child(even){
+  background-color: var(--gray1);
+  color: var(--gray3);
+  margin: 5px;
+}
+
+
+#database th {
+  padding: 12px;
+  text-align: left;
+  background-color: var(--darkgreen);
+  color: white;
+  align-items: center;
+  justify-content: center;
+} 
+
+
+
+
+/* -----------------------------------------------------
+
+        HELP DIV
+
+*/
+
+#helpDiv {
+  padding: 50px;
+  color: white;
+  display: none;
+  overflow: scroll;
+}
+
+
+
+
+
+/* -----------------------------------------------------
+
+        INTERACTION
+
+*/
+
+#hostControls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 12.5px;
+  flex: 1 0 auto;
+}
+
+#hostInput {
+  background-color: var(--primary);
+  flex: 1;
+}
+
+#interact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 15px;
+}
+
+#chatbox {
+  display: flex;
+  flex: 1 0 auto;
+  padding: 15px 0px;
+  overflow: auto;
+  height: calc(100vh - 150px);
+}
+
+#conversation {
+  overflow-y: scroll;
+  max-height: 100%;
+}
+
+#conversation>div {
+  padding: 0px;
+  margin: 15px;
+  max-width: 50%;
+  display: inline-block;
+  clear: both;
+}
+
+p {
+  padding: 10px;
+  margin: 0;
+}
+
+.user {
+  background-color: var(--lightgreen);
+  color: var(--gray3);
+  float: right;
+  border-radius: 10px;
+}
+
+.robart {
+  background-color: var(--darkgreen);
+  color: var(--white);
+  float: left;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+}
+
+#options>input {
+  background-color: var(--gray3);
+  color: var(--white);
+  text-decoration: none;
+  border-width: 1px;
+  border-style: none solid solid solid;
+  border-color: var(--darkgreen);
+  padding: 10px 5px;
+}
+
+#options>input:hover {
+background-color: var(--darkgreen);
+}
+
+#options>input:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#inputBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 12.5px;
+  flex: 0 0 auto;
+}
+
+#TextToSend {
+  background-color: var(--primary);
+  text-align: left;
+  flex: 1;
+  color: var(--gray3);
+  font-size: 20px;
+}
