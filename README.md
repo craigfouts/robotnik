@@ -1,5 +1,5 @@
-Robotnik - Experiments with Interactive Robotics
-================================================
+Robotnik - Experiments with Robotics Simulation
+===============================================
 A knowledge-based web application for robotic access and retrieval using IBM Watson. The application provides an interface for textual communication with a Webots simulation of two robots collaboratively operating a virtual warehouse. The user can submit queries about the warehouse's contents and request items for retrieval.
 
 ## Object Retrieval
